@@ -53,7 +53,7 @@ function HOME()
     if MN == 4 then MENU2() end
     if MN == 5 then sky() end
     if MN == 6 then drone() end
-    if MN == 7 then oneclicklobby() end
+    if MN == 7 then oneclick() end
     if MN == 8 then CLOSE() end
   end
   PUBGMH = -1
@@ -591,7 +591,6 @@ gg.toast("Drone High successful!")
 end
 
 function oneclicklobby()
-gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby\n4. Headshot")
 gg.setRanges(gg.REGION_BAD)
   gg.clearResults()
   gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -669,6 +668,11 @@ gg.getResults(10)
 gg.editAll("280", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("Headshot actived")
+end
+
+function oneclick()
+  gg.setVisible(false)
+  oneclickAlert = gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby\n4. Headshot", "NO", "YES")if oneclickAlert == 1 then HOME() elseif oneclickAlert == 2 then oneclicklobby() end
 end
 
 
