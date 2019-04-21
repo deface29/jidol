@@ -42,6 +42,7 @@ function HOME()
     "😈 Brutal Menu",
     "🌝 Menu Sky",
     "🤖 Menu Drone",
+    "👣 ONE CLICK LOBBY",
     "❎Exit"
   }, nil, "╔══════════════════════╗\n║            ⚜️Made in J i D o L⚜️           ║\n╚══════════════════════╝")
   if MN == nil then
@@ -52,7 +53,8 @@ function HOME()
     if MN == 4 then MENU2() end
     if MN == 5 then sky() end
     if MN == 6 then drone() end
-    if MN == 7 then CLOSE() end
+    if MN == 7 then oneclicklobby() end
+    if MN == 8 then CLOSE() end
   end
   PUBGMH = -1
 end
@@ -366,6 +368,7 @@ end
 
 function MENU2()
   MN4 = gg.multiChoice({
+	"⚜️ No Recoil 50% [Lobby]",
     "😈Headshot 95%",
     "🏹 AWM No Reload",
     "🏹 Kar86 No Reload",
@@ -374,11 +377,12 @@ function MENU2()
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
     else
-    if MN4[1] == true then HS() end
-    if MN4[2] == true then awmno() end
-    if MN4[3] == true then karno() end
-    if MN4[4] == true then sit() end
-    if MN4[5] == true then HOME() end
+    if MN4[1] == true then lesslobby() end
+    if MN4[2] == true then HS() end
+    if MN4[3] == true then awmno() end
+    if MN4[4] == true then karno() end
+    if MN4[5] == true then sit() end
+    if MN4[6] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -585,6 +589,88 @@ gg.editAll("1200", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("Drone High successful!")
 end
+
+function oneclicklobby()
+gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby\n4. Headshot")
+gg.setRanges(gg.REGION_BAD)
+  gg.clearResults()
+  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.clearResults()
+  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.clearResults()
+  gg.setRanges(gg.REGION_BAD)
+  gg.clearResults()
+  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.clearResults()
+  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.clearResults()
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.searchNumber("257;2131;0F~99999F;0::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResultCount()
+  gg.searchNumber("0F~99999F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("0", gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.toast("Reduce Report")
+ --------------------------------------------------------------------------
+  gg.clearResults()
+  gg.setRanges(gg.REGION_BAD)
+  gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
+  gg.searchNumber("2", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("130", gg.POINTER_WRITABLE)
+  gg.clearResults()
+  gg.setRanges(gg.REGION_BAD)
+  gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
+  gg.searchNumber("2", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("130", gg.POINTER_WRITABLE)
+  gg.clearResults()
+  gg.toast("WH Aktif ✔")
+--------------------------------------------------------------------------
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("256;8200;13::150", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("8200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("6", gg.TYPE_DWORD)
+gg.toast("Warna Tai ✔")
+gg.clearResults()
+--------------------------------------------------------------------------
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1.5584387e28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("0", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1D;0.05000000075F;0.10000000149F;0.55000001192F;9.5F;15.0F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(800)
+gg.editAll("0", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Less Recoil Lobby Successful!")
+--------------------------------------------------------------------------
+ gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("-88.66608428955;26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(2)
+gg.editAll("-466", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("-88.73961639404;28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(2)
+gg.editAll("-568", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("9.201618;30.5;25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("30.5;25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("280", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Headshot actived")
+end
+
 
 function CLOSE()
   print("Santuy gausah panik ada jidol")
