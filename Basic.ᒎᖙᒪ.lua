@@ -702,7 +702,7 @@ end
 
 
 function CLOSE()
-  print("Santuy gausah panik ada jidol")
+  print("Santuy gausah panik ada jidol🤷")
   gg.skipRestoreState()
   os.exit()
   gg.setVisible(true)
