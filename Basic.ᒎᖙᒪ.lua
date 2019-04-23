@@ -61,7 +61,7 @@ end
 
 function NOBAN()
   MNNOBAN = gg.choice({
-    "⛔Reduce Ban 10mnt [Island]",
+    --"⛔Reduce Ban 10mnt [Island]",
     "⛔Anti Report [Lobby][Every Match]",
     "⛔Anti Report [Game][Every Match]",
     "⛔Clear Log Match [Lobby][After Game]",
@@ -71,13 +71,13 @@ function NOBAN()
   }, nil, "╔══════════════╗\n║⚜️Anti Report Menu⚜️\n╚══════════════╝")
   if MNNOBAN == nil then
   else
-    if MNNOBAN == 1 then ban10mnt() end
-    if MNNOBAN == 2 then ANTIRPT() end
-    if MNNOBAN == 3 then ANTIRPT2() end
-    if MNNOBAN == 4 then CLRLOG() end
-    if MNNOBAN == 5 then STOPDETECTGB2() end    
-    if MNNOBAN == 6 then backobb() end
-    if MNNOBAN == 7 then HOME() end
+    --if MNNOBAN == 1 then ban10mnt() end
+    if MNNOBAN == 1 then ANTIRPT() end
+    if MNNOBAN == 2 then ANTIRPT2() end
+    if MNNOBAN == 3 then CLRLOG() end
+    if MNNOBAN == 4 then STOPDETECTGB2() end    
+    if MNNOBAN == 5 then backobb() end
+    if MNNOBAN == 6 then HOME() end
   end
   PUBGMH = -1
 end
