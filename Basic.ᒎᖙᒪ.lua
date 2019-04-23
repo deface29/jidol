@@ -373,6 +373,7 @@ function MENU2()
     "🏹 AWM No Reload",
     "🏹 Kar86 No Reload",
     "👹 Sit Down Scop",
+    "🆙 Fast Parasute [Lobby]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
@@ -382,30 +383,31 @@ function MENU2()
     if MN4[3] == true then awmno() end
     if MN4[4] == true then karno() end
     if MN4[5] == true then sit() end
+    --if MN4[6] == true then fastp() end
     if MN4[6] == true then HOME() end
     end
   PUBGMH = -1
 end
 
 function HS()
+gg.clearResults()
 gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("-88.66608428955;26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-88.66608428955;26:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(2)
-gg.editAll("-466", gg.TYPE_FLOAT)
+gg.editAll("-460", gg.TYPE_FLOAT)
 gg.clearResults()
-gg.searchNumber("-88.73961639404;28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-88.73961639404;28:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(2)
-gg.editAll("-568", gg.TYPE_FLOAT)
+gg.editAll("-560", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("9.201618;30.5;25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("30.5;25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("25;30.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
-gg.editAll("280", gg.TYPE_FLOAT)
+gg.editAll("250", gg.TYPE_FLOAT)
 gg.clearResults()
-gg.toast("Headshot actived")
 end
 
 function awmno()
@@ -461,6 +463,24 @@ gg.getResults(1000)
 gg.editAll("0", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("Actived")
+end
+
+function fastp()
+  gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber('0.75;150;1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber('1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(100)
+  gg.editAll('30', gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber('0.75;150;30', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber('0.75', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(100)
+  gg.editAll('0', gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.toast('Fast Parachute ACTIVATED')
+  gg.clearResults()
 end
 
 function sky()
