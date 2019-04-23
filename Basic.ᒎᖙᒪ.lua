@@ -62,7 +62,7 @@ end
 function NOBAN()
   MNNOBAN = gg.choice({
    -- "⛔Reduce Ban 10mnt [Island]",
-    "⛔Anti Report [Lobby][Every Match]",
+    "⛔Anti Report [Lobby 1x]",
     --"⛔Anti Report [Game][Every Match]",
     "⛔Clear Log Match [Lobby][After Game]",
     --"⛔OBB [Global]",
