@@ -41,7 +41,6 @@ function HOME()
     "🔓 Safe Menu",
     "😈 Brutal Menu",
     "🌝 Menu Sky",
-    "🤖 Menu Drone",
     "👣 ONE CLICK LOBBY",
     "❎Exit"
   }, nil, "╔══════════════════════╗\n║            ⚜️Made in J i D o L⚜️           ║\n╚══════════════════════╝")
@@ -52,9 +51,8 @@ function HOME()
     if MN == 3 then MENU() end
     if MN == 4 then MENU2() end
     if MN == 5 then sky() end
-    if MN == 6 then drone() end
-    if MN == 7 then oneclick() end
-    if MN == 8 then CLOSE() end
+    if MN == 6 then oneclick() end
+    if MN == 7 then CLOSE() end
   end
   PUBGMH = -1
 end
@@ -562,57 +560,6 @@ function CLEARSKY()
   gg.editAll("99999", gg.TYPE_FLOAT)
   gg.clearResults()
   gg.toast("🔵 Clear Sky activated")
-end
-
-function drone()
-MNBK = gg.choice({
-    "🌍 Low Drone",
-    "🌍 Medium Drone",
-    "🌍 High Drone",
-    "[🔙Back]"
-  }, nil, "╔══════════════════════╗\n║⚜️Drone Menu⚜️\n╚══════════════════════╝")
-  if MNBK == nil then
-  else
-    if MNBK == 1 then DRONE1() end
-    if MNBK == 2 then DRONE2() end
-    if MNBK == 3 then DRONE3() end
-    if MNBK == 4 then HOME() end
-  end
-  PUBGMH = -1
-end
-
-function DRONE1()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.clearResults()
-gg.searchNumber("220;178;15 ", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("220", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(300)
-gg.editAll("438", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("Mode Drone Dekat ✔")
-end
-
-function DRONE2()
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.clearResults()
-gg.searchNumber("220;178;15 ", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("220", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(300)
-gg.editAll("657", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("Drone Medium done!")
-end
-
-function DRONE3()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.clearResults()
-gg.searchNumber("220;178;15 ", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("220", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(300)
-gg.editAll("1200", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("Drone High successful!")
 end
 
 function oneclicklobby()
