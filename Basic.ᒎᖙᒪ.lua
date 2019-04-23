@@ -384,7 +384,7 @@ function MENU2()
     if MN4[4] == true then karno() end
     if MN4[5] == true then sit() end
     if MN4[6] == true then fastknock() end
-    if MN4[6] == true then HOME() end
+    if MN4[7] == true then HOME() end
     end
   PUBGMH = -1
 end
