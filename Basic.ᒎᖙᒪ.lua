@@ -283,7 +283,7 @@ function MENU()
     "🎯 Medium Headshot 50%[Game]",
     "⚜️ No Recoil 50% [Pick Gun]",
     "⚜️ No Recoil 50% [Lobby]",
-    "⚜️ No Recoil 100% [Pick Gun]",
+    --"⚜️ No Recoil 100% [Pick Gun]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Safe Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
@@ -291,8 +291,8 @@ function MENU()
     if MN4[1] == true then MHS() end
     if MN4[2] == true then lc50() end
     if MN4[3] == true then lesslobby() end
-    if MN4[4] == true then NO100() end
-    if MN4[5] == true then HOME() end
+    --if MN4[4] == true then NO100() end
+    if MN4[4] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -369,11 +369,11 @@ end
 function MENU2()
   MN4 = gg.multiChoice({
 	"⚜️ No Recoil 50% [Lobby]",
-    "😈Headshot 95%",
-    "🏹 AWM No Reload",
-    "🏹 Kar86 No Reload",
-    "👹 Sit Down Scop",
-    "🆙 Fast Parasute [Lobby]",
+    "😈Headshot 95% [Lobby]",
+    "🏹 AWM No Reload [Game]",
+    "🏹 Kar86 No Reload [Game]",
+    "👹 Sit Down Scop [Game]",
+    "🏇 Fast Knock [Game]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
@@ -383,7 +383,7 @@ function MENU2()
     if MN4[3] == true then awmno() end
     if MN4[4] == true then karno() end
     if MN4[5] == true then sit() end
-    --if MN4[6] == true then fastp() end
+    if MN4[6] == true then fastknock() end
     if MN4[6] == true then HOME() end
     end
   PUBGMH = -1
@@ -465,22 +465,15 @@ gg.clearResults()
 gg.toast("Actived")
 end
 
-function fastp()
+function fastknock()
   gg.clearResults()
   gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber('0.75;150;1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber('1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("0;7.0064923e-45;1;100;1;2,500,000,000.0;0.10000000149;88", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
   gg.getResults(100)
-  gg.editAll('30', gg.TYPE_FLOAT)
+  gg.editAll("9999", gg.TYPE_FLOAT)
   gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber('0.75;150;30', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber('0.75', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll('0', gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.toast('Fast Parachute ACTIVATED')
-  gg.clearResults()
+  gg.toast("Fast Knock OK")
 end
 
 function sky()
