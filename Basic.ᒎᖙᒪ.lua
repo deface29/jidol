@@ -281,7 +281,8 @@ function MENU()
     "🎯 Medium Headshot 50%[Game]",
     "⚜️ No Recoil 50% [Pick Gun]",
     "⚜️ No Recoil 50% [Lobby]",
-    --"⚜️ No Recoil 100% [Pick Gun]",
+    "⚜️ No Recoil 100% [Lobby]",
+    "⚜️ Anti Shake [Game]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Safe Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
@@ -289,8 +290,9 @@ function MENU()
     if MN4[1] == true then MHS() end
     if MN4[2] == true then lc50() end
     if MN4[3] == true then lesslobby() end
-    --if MN4[4] == true then NO100() end
-    if MN4[4] == true then HOME() end
+    if MN4[4] == true then NO100() end
+    if MN4[5] == true then shake() end
+    if MN4[6] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -348,20 +350,30 @@ end
 
 function NO100()
 gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1,084,227,584D;1D;0.64999997616F;1.2520827e-32F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("1.2520827e-32", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("1.4012985e-43", gg.TYPE_FLOAT)
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("8.0814659e-28",gg.TYPE_FLOAT)
+gg.searchNumber("8.0814659e-28",gg.TYPE_FLOAT)
+gg.getResults(1)
+gg.editAll("-8.0814659e-28",gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("3.8126822e-21;8.4988737e-21",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("3.8126822e-21",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(1)
+gg.editAll("-3.8126822e-21",gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("No Recoil 100% Lobby Aktif Plak")
+end
+
+function shake()
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("0.2~0.3;53;30;1::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("0.2~0.3;1::", gg.TYPE_FLOAT)
+gg.searchNumber("0.20000000298~0.30000001192F;53.0F;30.0F;1.0F::512",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("0.20000000298~0.30000001192F;1.0F::512",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
 gg.getResults(200)
-gg.editAll("1.4012985e-45", gg.TYPE_FLOAT)
+gg.editAll("1.4012985e-45",gg.TYPE_FLOAT)
 gg.clearResults()
-gg.toast("NO RECOIL 100% AKTIF √")
-gg.clearResults()
+gg.toast("No Shake Gun Aktif")
 end
 
 function MENU2()
