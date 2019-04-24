@@ -281,7 +281,7 @@ function MENU()
     "🎯 Medium Headshot 50%[Game]",
     "⚜️ No Recoil 50% [Pick Gun]",
     "⚜️ No Recoil 50% [Lobby]",
-    "⚜️ No Recoil 100% [Lobby]",
+    "🤷 Reduce Lag [Game]",
     "⚜️ Anti Shake [Game]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Safe Menu ⚜️\n╚═════════════╝")
@@ -290,7 +290,7 @@ function MENU()
     if MN4[1] == true then MHS() end
     if MN4[2] == true then lc50() end
     if MN4[3] == true then lesslobby() end
-    if MN4[4] == true then NO100() end
+    if MN4[4] == true then lag() end
     if MN4[5] == true then shake() end
     if MN4[6] == true then HOME() end
     end
@@ -348,21 +348,15 @@ gg.clearResults()
 gg.toast("Less Recoil Lobby Successful!")
 end
 
-function NO100()
+function lag()
 gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("8.0814659e-28",gg.TYPE_FLOAT)
-gg.searchNumber("8.0814659e-28",gg.TYPE_FLOAT)
-gg.getResults(1)
-gg.editAll("-8.0814659e-28",gg.TYPE_FLOAT)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("90.775703430176;0;8;15;16;18;28",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("28",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("1000",gg.TYPE_FLOAT)
 gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("3.8126822e-21;8.4988737e-21",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("3.8126822e-21",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
-gg.getResults(1)
-gg.editAll("-3.8126822e-21",gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("No Recoil 100% Lobby Aktif Plak")
+gg.alert("Santuy Kalem gausah panik")
 end
 
 function shake()
