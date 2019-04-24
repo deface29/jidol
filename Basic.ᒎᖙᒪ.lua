@@ -281,7 +281,7 @@ function MENU()
     "🎯 Medium Headshot 50%[Game]",
     "⚜️ No Recoil 50% [Pick Gun]",
     "⚜️ No Recoil 50% [Lobby]",
-    "⚜️ No Recoil 100% [Lobby]",
+    --"⚜️ No Recoil 100% [Lobby]",
     "🤷 Reduce Lag [Game]",
     "⚜️ Anti Shake [Game]",
     "[🔙Back]"
@@ -291,10 +291,10 @@ function MENU()
     if MN4[1] == true then MHS() end
     if MN4[2] == true then lc50() end
     if MN4[3] == true then lesslobby() end
-    if MN4[4] == true then no100() end
-    if MN4[5] == true then lag() end
-    if MN4[6] == true then shake() end
-    if MN4[7] == true then HOME() end
+    --if MN4[4] == true then no100() end
+    if MN4[4] == true then lag() end
+    if MN4[5] == true then shake() end
+    if MN4[6] == true then HOME() end
     end
   PUBGMH = -1
 end
