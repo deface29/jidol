@@ -391,23 +391,29 @@ end
 
 function MENU2()
   MN4 = gg.multiChoice({
-	"⚜️ No Recoil 50% [Lobby]",
-    "😈Headshot 95% [Lobby]",
+    "😈Headshot 95% [Game]",
     "🏹 AWM No Reload [Game]",
     "🏹 Kar86 No Reload [Game]",
     "👹 Sit Down Scop [Game]",
     "🏇 Fast Knock [Game]",
+    "🚙 Jeep Water[Game]",
+    "👣 No Foot Step [Game]",
+    "👌 Fast Kill [Game]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
     else
-    if MN4[1] == true then lesslobby() end
-    if MN4[2] == true then HS() end
-    if MN4[3] == true then awmno() end
-    if MN4[4] == true then karno() end
-    if MN4[5] == true then sit() end
-    if MN4[6] == true then fastknock() end
-    if MN4[7] == true then HOME() end
+    if MN4[1] == true then HS() end
+    if MN4[2] == true then awmno() 
+sawm() end
+    if MN4[3] == true then karno() 
+spdkar() end
+    if MN4[4] == true then sit() end
+    if MN4[5] == true then fastknock() end
+    if MN4[6] == true then jeep() end
+    if MN4[7] == true then nft() end
+    if MN4[8] == true then fastkill() end
+    if MN4[9] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -440,6 +446,10 @@ gg.searchNumber("91000;2.29999995232;1.8", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 
 gg.searchNumber("2.29999995232;1.8", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(15)
 gg.editAll("0", gg.TYPE_FLOAT)
+gg.toast("AWM jos")
+end
+
+function sawm()
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("91000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -461,6 +471,10 @@ gg.searchNumber("76000;5D;1.89999997616;0.1::50", gg.TYPE_FLOAT, false, gg.SIGN_
 gg.searchNumber("1.89999997616", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
 gg.editAll("0", gg.TYPE_FLOAT)
+gg.toast("KAR-98 NO RELOAD AKTIF💯")
+end
+
+function spdkar()
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("76000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -497,6 +511,56 @@ function fastknock()
   gg.editAll("9999", gg.TYPE_FLOAT)
   gg.clearResults()
   gg.toast("Fast Knock OK")
+end
+
+function jeep()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("0.76000005007;0.96078431606;1;0.74509805441::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("0.74509805441", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(9999)
+gg.editAll("99999", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Jeep Water AKTIF💯")
+end
+
+function nft()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.setVisible(false)
+gg.searchNumber("2D;256D;256D;0.96666663885117;256D", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.setVisible(false)
+gg.searchNumber("0.96666663885117", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(3)
+gg.editAll("999.9949", gg.TYPE_FLOAT)
+gg.toast("No Foot Step AKTIF💯")
+end
+
+function fastkill()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("88.15017700195;15:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("15", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("1500", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("-88.66608428955;26:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("1500", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("90.4850692749;27.25;28:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("27.25;28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("1500", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("1,104,805,888D;18", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("18", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(250)
+gg.editAll("100", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Fast Kill AKTIF💯")
 end
 
 function sky()
@@ -645,30 +709,11 @@ gg.getResults(800)
 gg.editAll("0", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast("Less Recoil Lobby Successful!")
---------------------------------------------------------------------------
- gg.clearResults()
-gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("-88.66608428955;26:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(2)
-gg.editAll("-460", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("-88.73961639404;28:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(2)
-gg.editAll("-560", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("9.201618;30.5;25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("25;30.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(10)
-gg.editAll("250", gg.TYPE_FLOAT)
-gg.clearResults()
 end
 
 function oneclick()
   gg.setVisible(false)
-  oneclickAlert = gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby\n4. Headshot", "NO", "YES")if oneclickAlert == 1 then HOME() elseif oneclickAlert == 2 then oneclicklobby() end
+  oneclickAlert = gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby", "NO", "YES")if oneclickAlert == 1 then HOME() elseif oneclickAlert == 2 then oneclicklobby() end
 end
 
 
