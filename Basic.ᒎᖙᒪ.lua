@@ -26,10 +26,37 @@ gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 end
 
+function BP2()
+gg.clearResults()
+ gg.setRanges(gg.REGION_C_ALLOC)
+ gg.searchNumber('1954047316;1970037078', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+ gg.searchNumber('1954047316;1970037078', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+ gg.getResults(10)
+ gg.editAll('9', gg.TYPE_DWORD)
+ gg.clearResults()
+ gg.editAll(1, gg.TYPE_AUTO)
+ gg.clearResults()
+ gg.searchNumber('1', gg.TYPE_AUTO)
+ gg.clearResults()
+ gg.setRanges(gg.REGION_BAD)
+ gg.clearResults()
+ gg.searchNumber('2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.clearResults()
+ gg.searchNumber('2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.clearResults()
+ gg.searchNumber('2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.clearResults()
+ gg.searchNumber('2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.clearResults()
+ gg.searchNumber('2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.clearResults()
+ gg.toast('BYPASS  PRO ON 100%!! SUKSESS')
+end
+
 
 function startBypass()
   gg.setVisible(false)
-  bypassAlert = gg.alert("Bypass", "NO", "YES") if bypassAlert == 2 then BP() end
+  bypassAlert = gg.alert("Bypass", "NO", "YES") if bypassAlert == 2 then BP2() end
 end
 startBypass()
 
@@ -278,7 +305,9 @@ end
 
 function MENU()
   MN4 = gg.multiChoice({
-    "🎯 Medium Headshot 50%[Game]",
+    "🎯 Headshot 50%[Game]",
+    "🎯 AIM Lock[Game]",
+    "👣 No Foot Step [Game]",
     "⚜️ No Recoil 50% [Pick Gun]",
     "⚜️ No Recoil 50% [Lobby]",
     --"⚜️ No Recoil 100% [Lobby]",
@@ -289,12 +318,14 @@ function MENU()
     if MN4 == nil then
     else
     if MN4[1] == true then MHS() end
-    if MN4[2] == true then lc50() end
-    if MN4[3] == true then lesslobby() end
+    if MN4[2] == true then aiml() end
+    if MN4[3] == true then nft() end
+    if MN4[4] == true then lc50() end
+    if MN4[5] == true then lesslobby() end
     --if MN4[4] == true then no100() end
-    if MN4[4] == true then lag() end
-    if MN4[5] == true then shake() end
-    if MN4[6] == true then HOME() end
+    if MN4[6] == true then lag() end
+    if MN4[7] == true then shake() end
+    if MN4[8] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -319,6 +350,30 @@ gg.getResults(10)
 gg.editAll("100", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("HEADSHOT 50% AKTIF √")
+end
+
+function aiml()
+gg.clearResults()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("360.0;0.0001;1,478,828,288.0::",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResultCount()
+gg.searchNumber("0.0001",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(2)
+gg.editAll("1998",gg.TYPE_FLOAT)
+gg.toast("Aimlock ✔")
+gg.clearResults()
+end
+
+function nft()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.setVisible(false)
+gg.searchNumber("2D;256D;256D;0.96666663885117;256D", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.setVisible(false)
+gg.searchNumber("0.96666663885117", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(3)
+gg.editAll("999.9949", gg.TYPE_FLOAT)
+gg.toast("No Foot Step AKTIF💯")
 end
 
 function lc50()
@@ -397,23 +452,19 @@ function MENU2()
     "👹 Sit Down Scop [Game]",
     "🏇 Fast Knock [Game]",
     "🚙 Jeep Water[Game]",
-    "👣 No Foot Step [Game]",
     "👌 Fast Kill [Game]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
     else
     if MN4[1] == true then HS() end
-    if MN4[2] == true then awmno() 
-sawm() end
-    if MN4[3] == true then karno() 
-spdkar() end
+    if MN4[2] == true then awmno() end
+    if MN4[3] == true then karno() end
     if MN4[4] == true then sit() end
     if MN4[5] == true then fastknock() end
     if MN4[6] == true then jeep() end
-    if MN4[7] == true then nft() end
-    if MN4[8] == true then fastkill() end
-    if MN4[9] == true then HOME() end
+    if MN4[7] == true then fastkill() end
+    if MN4[8] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -516,24 +567,17 @@ end
 function jeep()
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("0.76000005007;0.96078431606;1;0.74509805441::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("0.74509805441", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("0.76000005007;0.96078431606;1;0.74509805441::",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("0.74509805441",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
 gg.getResults(9999)
-gg.editAll("99999", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("Jeep Water AKTIF💯")
-end
-
-function nft()
+gg.editAll("99999",gg.TYPE_FLOAT)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.setVisible(false)
-gg.searchNumber("2D;256D;256D;0.96666663885117;256D", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.setVisible(false)
-gg.searchNumber("0.96666663885117", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(3)
-gg.editAll("999.9949", gg.TYPE_FLOAT)
-gg.toast("No Foot Step AKTIF💯")
+gg.searchNumber("45F;15F;20F;2500F",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("45",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(999)
+gg.editAll("500",gg.TYPE_FLOAT)
+gg.toast("Fly Jeep Activated")
 end
 
 function fastkill()
