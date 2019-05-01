@@ -305,7 +305,7 @@ end
 
 function MENU()
   MN4 = gg.multiChoice({
-    "🎯 Headshot 50%[Game]",
+    "🎯 Headshot 50%[Lobby]",
     "🎯 AIM Lock[Game]",
     "👣 No Foot Step [Game]",
     "⚜️ No Recoil 50% [Pick Gun]",
@@ -351,6 +351,7 @@ gg.editAll("100", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("HEADSHOT 50% AKTIF √")
 end
+
 
 function aiml()
 gg.clearResults()
@@ -453,6 +454,7 @@ function MENU2()
     "🏇 Fast Knock [Game]",
     "🚙 Jeep Water[Game]",
     "👌 Fast Kill [Game]",
+    "🎯 Super AIM Lock [Lobby]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
@@ -464,7 +466,8 @@ function MENU2()
     if MN4[5] == true then fastknock() end
     if MN4[6] == true then jeep() end
     if MN4[7] == true then fastkill() end
-    if MN4[8] == true then HOME() end
+    if MN4[8] == true then aimls() end
+    if MN4[9] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -500,15 +503,6 @@ gg.editAll("0", gg.TYPE_FLOAT)
 gg.toast("AWM jos")
 end
 
-function sawm()
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("91000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("500000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("AWM NO RELOAD ")
-end
 
 function karno()
 gg.clearResults()
@@ -523,16 +517,6 @@ gg.searchNumber("1.89999997616", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
 gg.editAll("0", gg.TYPE_FLOAT)
 gg.toast("KAR-98 NO RELOAD AKTIF💯")
-end
-
-function spdkar()
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("76000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("500000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("KAR98 NO RELOAD")
 end
 
 function sit()
@@ -605,6 +589,17 @@ gg.getResults(250)
 gg.editAll("100", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("Fast Kill AKTIF💯")
+end
+
+function aimls()
+gg.clearResults()
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("0.0001;360.0;0.0;1,478,828,416.0", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("0.0001", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(2)
+  gg.editAll("5000", gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.toast(" Super Aimlock ")
 end
 
 function sky()
@@ -734,11 +729,12 @@ gg.setRanges(gg.REGION_BAD)
 --------------------------------------------------------------------------
 gg.clearResults()
 gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("1.3912525e-19F;8200;96", gg.TYPE_DWORD, false)
-gg.searchNumber("8200", gg.TYPE_DWORD, false)
+gg.searchNumber("256;8200;13::150", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("8200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
-gg.editAll("8202", gg.TYPE_DWORD)
-gg.toast("Successful Activation")
+gg.editAll("6", gg.TYPE_DWORD)
+gg.toast("Warna Tai ✔")
+gg.clearResults()
 --------------------------------------------------------------------------
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
