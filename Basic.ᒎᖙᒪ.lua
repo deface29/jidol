@@ -186,7 +186,6 @@ function WH()
   MN1 = gg.multiChoice({
     "🎭 WH SD 625",
     "🎭 WH SD 636",
-    "🎭 Colour Pink",
     "🎭 Colour Red",
     "🎭 Colour Green",
     "🎭 Colour Yellow",
@@ -197,48 +196,46 @@ function WH()
   else
     if MN1[1] == true then WH625() end
     if MN1[2] == true then WH636() end
-    if MN1[3] == true then colorpink() end
-    if MN1[4] == true then red() end
-    if MN1[5] == true then green() end
-    if MN1[6] == true then yellow() end
-    if MN1[7] == true then blue() end
-    if MN1[8] == true then HOME() end
+    if MN1[3] == true then red() end
+    if MN1[4] == true then green() end
+    if MN1[5] == true then yellow() end
+    if MN1[6] == true then blue() end
+    if MN1[7] == true then HOME() end
   end
   PUBGMH = -1
 end
 
 function WH625()
   gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("130", gg.POINTER_WRITABLE)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("130", gg.POINTER_WRITABLE)
-  gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::",gg.POINTER_WRITABLE, false,gg.SIGN_FUZZY_EQUAL, 0, -1)
+gg.searchNumber("2",gg.POINTER_WRITABLE, false,gg.SIGN_FUZZY_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130",gg.POINTER_WRITABLE)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::",gg.POINTER_WRITABLE, false,gg.SIGN_FUZZY_EQUAL, 0, -1)
+gg.searchNumber("2",gg.POINTER_WRITABLE, false,gg.SIGN_FUZZY_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130",gg.POINTER_WRITABLE)
+gg.clearResults()
   gg.toast("WH SD 625 Aktif ✔")
 end
 
 
 function WH636()
 gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("130", gg.POINTER_WRITABLE)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.POINTER_WRITABLE, false, gg.SIGN_FUZZY_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("130", gg.POINTER_WRITABLE)
-  gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;1.0F;-127.0F;0.00999999978F::200",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2,gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120",gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2,gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120",gg.TYPE_FLOAT)
+gg.clearResults()
 gg.toast("Wallhack 636 activated!")
 end
 
@@ -475,22 +472,23 @@ end
 function HS()
 gg.clearResults()
 gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("-88.66608428955;26:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("26", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-88.66608428955;26:512",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("26",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
 gg.getResults(2)
-gg.editAll("-460", gg.TYPE_FLOAT)
+gg.editAll("-460",gg.TYPE_FLOAT)
 gg.clearResults()
-gg.searchNumber("-88.73961639404;28:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-88.73961639404;28:512",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("28",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
 gg.getResults(2)
-gg.editAll("-560", gg.TYPE_FLOAT)
+gg.editAll("-560",gg.TYPE_FLOAT)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("9.201618;30.5;25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("25;30.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("9.201618;30.5;25",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("25;30.5",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
-gg.editAll("250", gg.TYPE_FLOAT)
+gg.editAll("250",gg.TYPE_FLOAT)
 gg.clearResults()
+gg.toast("Auto HS 95%")
 end
 
 function awmno()
