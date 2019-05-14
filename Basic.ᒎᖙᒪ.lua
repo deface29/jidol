@@ -24,6 +24,7 @@ gg.getResults(100)
 gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
+gg.toast("Bypass Done")
 end
 
 function BP2()
@@ -56,7 +57,7 @@ end
 
 function startBypass()
   gg.setVisible(false)
-  bypassAlert = gg.alert("Bypass", "NO", "YES") if bypassAlert == 2 then BP2() end
+  bypassAlert = gg.alert("Bypass", "NO", "YES") if bypassAlert == 2 then BP() end
 end
 startBypass()
 
@@ -78,7 +79,7 @@ function HOME()
     if MN == 3 then MENU() end
     if MN == 4 then MENU2() end
     if MN == 5 then sky() end
-    if MN == 6 then oneclick() end
+    if MN == 6 then oneclicklobby() end
     if MN == 7 then CLOSE() end
   end
   PUBGMH = -1
@@ -163,6 +164,8 @@ function CLRLOG()
   os.remove("/storage/emulated/0/Android/data/com.vng.pubgmobile/cache/GCloud.ini")
   os.remove("/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
   os.remove("/storage/emulated/0/Android/data/com.tencent.ig/cache/GCloud.ini")
+  os.remove("/storage/emulated/0/Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
+  os.remove("/storage/emulated/0/Android/data/com.pubg.krmobile/cache/GCloud.ini")
   gg.alert("Clear Log Match Done🇮🇩")
 end
 
@@ -689,26 +692,6 @@ function CLEARSKY()
 end
 
 function oneclicklobby()
-gg.setRanges(gg.REGION_BAD)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_C_ALLOC)
-  gg.searchNumber("257;2131;0F~99999F;0::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResultCount()
-  gg.searchNumber("0F~99999F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("0", gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.toast("Reduce Report")
  --------------------------------------------------------------------------
   gg.clearResults()
   gg.setRanges(gg.REGION_BAD)
@@ -749,10 +732,10 @@ gg.clearResults()
 gg.toast("Less Recoil Lobby Successful!")
 end
 
-function oneclick()
-  gg.setVisible(false)
-  oneclickAlert = gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby", "NO", "YES")if oneclickAlert == 1 then HOME() elseif oneclickAlert == 2 then oneclicklobby() end
-end
+--function oneclick()
+  --gg.setVisible(false)
+--  oneclickAlert = gg.alert("Fiture One Click Lobby\n\n1. Anti Report Lobby\n2. Wallhack + Color Yellow\n3. Less Recoil Lobby", "NO", "YES")if oneclickAlert == 1 then HOME() elseif oneclickAlert == 2 then oneclicklobby() end
+--end
 
 
 function CLOSE()
