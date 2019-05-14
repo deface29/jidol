@@ -454,7 +454,7 @@ function MENU2()
     "🏇 Fast Knock [Game]",
     "🚙 Jeep Water[Game]",
     "👌 Fast Kill [Game]",
-    "🎯 Super AIM Lock [Lobby]",
+    "🤸 High Jump [Game]",
     "[🔙Back]"
     }, nil, "╔═════════════╗\n║⚜️ Feature Brutal Menu ⚜️\n╚═════════════╝")
     if MN4 == nil then
@@ -466,7 +466,7 @@ function MENU2()
     if MN4[5] == true then fastknock() end
     if MN4[6] == true then jeep() end
     if MN4[7] == true then fastkill() end
-    if MN4[8] == true then aimls() end
+    if MN4[8] == true then jump() end
     if MN4[9] == true then HOME() end
     end
   PUBGMH = -1
@@ -603,6 +603,19 @@ gg.clearResults()
   gg.toast(" Super Aimlock ")
 end
 
+function jump()
+gg.setRanges(32)
+gg.searchNumber("1;35;443;55;0.57357645035", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.setRanges(32)
+gg.searchNumber("3;35;443;55;0.57357645035", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("443", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500)
+gg.editAll("2500", gg.TYPE_FLOAT)
+gg.toast("Ninja Jump Active")
+end
 function sky()
 MNBK = gg.choice({
     "⚫️ Black Sky",
