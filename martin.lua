@@ -247,12 +247,15 @@ function menu()
       dmg()
     end
     if MN1[6] == true then
-      son()
+      karno()
     end
     if MN1[7] == true then
-      sof()
+      son()
     end
     if MN1[8] == true then
+      sof()
+    end
+    if MN1[9] == true then
       HOME()
     end
   end
