@@ -219,7 +219,7 @@ function game()
 end
 function menu()
   MN1 = gg.multiChoice({
-    "🎭 Fast Parasute [Spawn Island]"
+    "🎭 Fast Parasute [Spawn Island]",
     "🎭 Walltrought",
     "🎭 Sit Down Scop",
     "🎭 Jeep Water & fly",
