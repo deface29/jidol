@@ -219,7 +219,7 @@ function game()
 end
 function menu()
   MN1 = gg.multiChoice({
-    "🎭 Fast Knock",
+    "🎭 Fast Parasute [Spawn Island]"
     "🎭 Walltrought",
     "🎭 Sit Down Scop",
     "🎭 Jeep Water & fly",
@@ -232,7 +232,7 @@ function menu()
   if MN1 == nil then
   else
     if MN1[1] == true then
-      fastknock()
+      fastp()
     end
     if MN1[2] == true then
       wj()
@@ -261,6 +261,24 @@ function menu()
   end
   PUBGMH = -1
 end
+
+function fastp()
+    gg.clearResults()
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('0.75;150;1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.searchNumber('1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.getResults(100)
+    gg.editAll('30', gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('0.75;150;30', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.searchNumber('0.75', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.getResults(100)
+    gg.editAll('0', gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast('Done')
+  end
+
 function sdc()
   gg.setRanges(gg.REGION_ANONYMOUS)
   gg.clearResults()
