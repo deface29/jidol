@@ -1,91 +1,3 @@
-function BP()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.clearResults()
-  gg.searchNumber("5001;1.1;1F::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("5001;1.1;1F::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("5001;1.1;1F::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("5001;1.1;1F::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.toast("Bypass Done")
-  os.remove("/storage/emulated/0/Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
-  os.remove("/storage/emulated/0/Android/data/com.pubg.krmobile/cache/GCloud.ini")
-end
-function startBypass()
-  gg.setVisible(false)
-  bypassAlert = gg.alert("Bypass Korea Wajib", "NO", "YES")
-  if bypassAlert == 2 then
-    BP()
-  end
-end
-startBypass()
-function clear()
-  os.remove("/storage/emulated/0/Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
-  os.remove("/storage/emulated/0/Android/data/com.pubg.krmobile/cache/GCloud.ini")
-  os.remove("/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
-  os.remove("/storage/emulated/0/Android/data/com.tencent.ig/cache/GCloud.ini")
-end
-function ban10mnt()
-  gg.clearResults()
-  gg.setRanges(gg.REGION_C_ALLOC)
-  gg.searchNumber("1954047316;1970037078", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1954047316;1970037078", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("9", gg.TYPE_DWORD)
-  gg.toast("Reduce Ban 10mnt Landing Activated")
-end
-function reducelobby()
-  gg.clearResults()
-  gg.setRanges(gg.REGION_C_ALLOC)
-  gg.searchNumber("909391408;808923191::8", gg.TYPE_DWORD)
-  gg.getResults(999)
-  gg.editAll("1089886885", gg.TYPE_DWORD)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_C_ALLOC)
-  gg.searchNumber("909391408", gg.TYPE_DWORD)
-  gg.getResults(999)
-  gg.editAll("1089886885", gg.TYPE_DWORD)
-  gg.toast("Done ✔️")
-end
-function report()
-  gg.setRanges(gg.REGION_BAD)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_C_ALLOC)
-  gg.searchNumber("257;2131;0F~99999F;0::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResultCount()
-  gg.searchNumber("0F~99999F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(10)
-  gg.editAll("0", gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.toast("Reduce Report")
-end
 function lobby()
   gg.clearResults()
   gg.setRanges(gg.REGION_BAD)
@@ -135,31 +47,27 @@ end
 PUBGMH = 1
 function HOME()
   MN = gg.choice({
-    "‼️ Anti Report [ Lobby 1x ]",
-    "🈲 Lobby 1x",
-    "1️⃣ Game",
-    "2️⃣ Menu Function",
-    "3️⃣ Skin Weapon [Lobby]",
-    "🔚 EXIT"
+    "㊙️ One Click Lobby ☑️",
+    "㊙️ One Click Game ☑️",
+    "㊙️ Menu Function 📂",
+    "㊙️ Skin Weapon [Lobby] 📂",
+    "❌ EXIT ❌"
   }, nil, "Jidoͥℓoͣwͫnℓψ😙\n")
   if MN == nil then
   else
     if MN == 1 then
-      report()
-    end
-    if MN == 2 then
       lobby()
     end
-    if MN == 3 then
+    if MN == 2 then
       game()
     end
-    if MN == 4 then
+    if MN == 3 then
       menu()
     end
-    if MN == 5 then
+    if MN == 4 then
       skin()
     end
-    if MN == 6 then
+    if MN == 5 then
       CLOSE()
     end
   end
@@ -226,6 +134,7 @@ function menu()
     "🎭 Damage Plus",
     "🎭 Kar No Reload",
     "🎭 Micro Speed No Lag",
+    "🎭 High Jump",
     "[🔙Back]"
   }, nil, "MENU")
   if MN1 == nil then
@@ -252,6 +161,9 @@ function menu()
       mspd()
     end
     if MN1[8] == true then
+      jump()
+    end
+    if MN1[9] == true then
       HOME()
     end
   end
@@ -390,6 +302,20 @@ gg.searchNumber("1.89999997616", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
 gg.editAll("0", gg.TYPE_FLOAT)
 gg.toast("KAR-98 NO RELOAD AKTIF💯")
+end
+
+function jump()
+gg.setRanges(32)
+gg.searchNumber("1;35;443;55;0.57357645035", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.setRanges(32)
+gg.searchNumber("3;35;443;55;0.57357645035", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("443", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500)
+gg.editAll("2500", gg.TYPE_FLOAT)
+gg.toast("Ninja Jump Active")
 end
 
 function skin()
@@ -1093,6 +1019,7 @@ function PAN2()
   gg.editAll(" 1108004054 ", gg.TYPE_DWORD)
   gg.toast("Done")
 end
+
 function CLOSE()
   print("NOOB")
   gg.skipRestoreState()
