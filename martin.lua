@@ -225,8 +225,7 @@ function menu()
     "🎭 Jeep Water & fly",
     "🎭 Damage Plus",
     "🎭 Kar No Reload",
-    "🎭 Speed ON",
-    "🎭 Speed OFF",
+    "🎭 Micro Speed No Lag",
     "[🔙Back]"
   }, nil, "MENU")
   if MN1 == nil then
@@ -250,12 +249,9 @@ function menu()
       karno()
     end
     if MN1[7] == true then
-      son()
+      mspd()
     end
     if MN1[8] == true then
-      sof()
-    end
-    if MN1[9] == true then
       HOME()
     end
   end
@@ -340,6 +336,18 @@ function dmg()
   gg.clearResults()
   gg.toast("Damage Tambahan Aktif Plak √")
 end
+
+function mspd()
+   gg.clearResults()
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('0;7.0064923e-45;1;100;1;2,500,000,000.0;0.10000000149;88', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.searchNumber('1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.getResults(100)
+    gg.editAll('1.7', gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast('Run Micro Aktif ') 
+end
+
 function son()
   gg.clearResults()
   gg.searchNumber("1;1;1;0.0001;20;0.0005;0.4::50", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
