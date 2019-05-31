@@ -67,6 +67,7 @@ function HOME()
     "🖕 Report & Protection",
     "👫 Wallhack + Color [Lobby]",
     "🔓 Safe Menu",
+    "⚔️ Recoil Menu",
     "😈 Brutal Menu",
     "🌝 Menu Sky",
     "👣 ONE CLICK LOBBY",
@@ -77,10 +78,11 @@ function HOME()
     if MN == 1 then NOBAN() end
     if MN == 2 then WH() end
     if MN == 3 then MENU() end
-    if MN == 4 then MENU2() end
-    if MN == 5 then sky() end
-    if MN == 6 then oneclicklobby() end
-    if MN == 7 then CLOSE() end
+    if MN == 4 then recoil() end
+    if MN == 5 then MENU2() end
+    if MN == 6 then sky() end
+    if MN == 7 then oneclicklobby() end
+    if MN == 8 then CLOSE() end
   end
   PUBGMH = -1
 end
@@ -301,14 +303,75 @@ gg.editAll("8202", gg.TYPE_DWORD)
 gg.toast("Successful Activation")
 end
 
+function recoil()
+  MN4 = gg.multiChoice({
+    "⚜️ No Recoil 50% [Lobby]",
+    "⚜️ No Recoil 50% [Game]",
+    "⚜️ No Recoil 100% [Game]",
+    "[🔙Back]"
+    }, nil, "╔═════════════╗\n║⚜️ Feature Recoil Menu ⚜️\n╚═════════════╝")
+    if MN4 == nil then
+    else
+    if MN4[1] == true then lesslobby() end
+    if MN4[2] == true then lc50() end
+    if MN4[3] == true then NO100() end
+    if MN4[4] == true then HOME() end
+    end
+  PUBGMH = -1
+end
+
+function lesslobby()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1.5584387e28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("0", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1D;0.05000000075F;0.10000000149F;0.55000001192F;9.5F;15.0F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(800)
+gg.editAll("0", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Less Recoil Lobby Successful!")
+end
+
+function lc50()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("176293393;8F;9.5F;15F::", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResultCount()
+gg.searchNumber("176293393", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("176293392", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("No Recoil 50% Aktif ")
+gg.clearResults()
+end
+
+function NO100()
+gg.clearResults()
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('1,084,227,584D;1D;0.64999997616F;1.2520827e-32F', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.searchNumber('1.2520827e-32', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.getResults(100)
+    gg.editAll('1.4012985e-43', gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('0.2~0.3;53;30;1::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+    gg.searchNumber('0.2~0.3;1::', gg.TYPE_FLOAT)
+    gg.getResults(200)
+    gg.editAll('1.4012985e-45', gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast('NO RECOIL AKTIF √')
+    gg.clearResults()
+    end
+    
 function MENU()
   MN4 = gg.multiChoice({
     "🎯 Headshot 50%[Lobby]",
     "🎯 AIM Lock[Game]",
     "👣 No Foot Step [Game]",
-    "⚜️ No Recoil 50% [Pick Gun]",
-    "⚜️ No Recoil 50% [Lobby]",
-    --"⚜️ No Recoil 100% [Lobby]",
     "🤷 Reduce Lag [Game]",
     "⚜️ Anti Shake [Game]",
     "[🔙Back]"
@@ -318,12 +381,9 @@ function MENU()
     if MN4[1] == true then MHS() end
     if MN4[2] == true then aiml() end
     if MN4[3] == true then nft() end
-    if MN4[4] == true then lc50() end
-    if MN4[5] == true then lesslobby() end
-    --if MN4[4] == true then no100() end
-    if MN4[6] == true then lag() end
-    if MN4[7] == true then shake() end
-    if MN4[8] == true then HOME() end
+    if MN4[4] == true then lag() end
+    if MN4[5] == true then shake() end
+    if MN4[6] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -375,34 +435,7 @@ gg.editAll("999.9949", gg.TYPE_FLOAT)
 gg.toast("No Foot Step AKTIF💯")
 end
 
-function lc50()
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("176293393;8F;9.5F;15F::", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResultCount()
-gg.searchNumber("176293393", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("176293392", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("No Recoil 50% Aktif ")
-gg.clearResults()
-end
 
-function lesslobby()
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1.5584387e28", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("0", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1D;0.05000000075F;0.10000000149F;0.55000001192F;9.5F;15.0F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(800)
-gg.editAll("0", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("Less Recoil Lobby Successful!")
-end
 
 function no100()
 gg.clearResults()
@@ -448,7 +481,7 @@ function MENU2()
     "😈Headshot 95% [Game]",
     "🏹 AWM No Reload [Game]",
     "🏹 Kar86 No Reload [Game]",
-    "👹 Sit Down Scop [Game]",
+    --"👹 Sit Down Scop [Game]",
     "🏇 Fast Knock [Game]",
     "🚙 Jeep Water[Game]",
     "👌 Fast Kill [Game]",
@@ -460,12 +493,12 @@ function MENU2()
     if MN4[1] == true then HS() end
     if MN4[2] == true then awmno() end
     if MN4[3] == true then karno() end
-    if MN4[4] == true then sit() end
-    if MN4[5] == true then fastknock() end
-    if MN4[6] == true then jeep() end
-    if MN4[7] == true then fastkill() end
-    if MN4[8] == true then jump() end
-    if MN4[9] == true then HOME() end
+    --if MN4[4] == true then sit() end
+    if MN4[4] == true then fastknock() end
+    if MN4[5] == true then jeep() end
+    if MN4[6] == true then fastkill() end
+    if MN4[7] == true then jump() end
+    if MN4[8] == true then HOME() end
     end
   PUBGMH = -1
 end
@@ -737,7 +770,7 @@ gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1D;0.05000000075F;0.10000000149F;0.55000001192F;9.5F;15.0F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(800)
+gg.getResults(100)
 gg.editAll("0", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast("Less Recoil Lobby Successful!")
