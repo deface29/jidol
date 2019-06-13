@@ -285,12 +285,12 @@ end
 function yellow()
 gg.clearResults()
 gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("256;8200;13::150", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("8200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1.3912525e-19F;8200;96", gg.TYPE_DWORD, false)
+gg.searchNumber("8200", gg.TYPE_DWORD, false)
 gg.getResults(10)
 gg.editAll("6", gg.TYPE_DWORD)
-gg.toast("Warna Tai ✔")
 gg.clearResults()
+gg.toast("Yellow Body Activated")
 end
 
 function blue()
@@ -754,12 +754,13 @@ function oneclicklobby()
 --------------------------------------------------------------------------
 gg.clearResults()
 gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("256;8200;13::150", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("8200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1.3912525e-19F;8200;96", gg.TYPE_DWORD, false)
+gg.searchNumber("8200", gg.TYPE_DWORD, false)
 gg.getResults(10)
 gg.editAll("6", gg.TYPE_DWORD)
-gg.toast("Warna Tai ✔")
 gg.clearResults()
+gg.toast("Yellow Body Activated")
+
 --------------------------------------------------------------------------
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
